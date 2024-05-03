@@ -1,6 +1,5 @@
 # entrega 1
 
-
 #===================================================    
 # DB
 #===================================================    
@@ -19,7 +18,7 @@ def existe_usuario(db,username):
 def login(db):
     usu = input('ingrese nombre de usuario: ')
     con = input('ingrese contraseña: ') 
-    print(f'loginnnnn {usu}  -- {con} --')
+    print(f'usuario: <{usu}>  -- contraseña: <{con}> ')
     # buscar si existe el usuario
     
     # su contraseña es válida?
@@ -55,31 +54,58 @@ def register(db):
 flag = True
 while flag:
     print('''
-*******-_ BIENVENIDO _-*******
+*******************************
+**********   MENU   ***********
+*******************************
+
 - 1) Login
 - 2) Registrarse
 - 3) Buscar usuarios
 - 4) Salir
+
 ''')
     option = input('Ingrese una opcion: ')
+    print('========================================')
     if option == '1':
-        print('--- LOGIN ---') 
+        print('''
+*******************************
+**********   LOGIN   **********
+*******************************
+
+''')
         login(datos_usuarios)
 
     elif option == '2':
-        print('--- REGISTRARSE ---')
+        print('''
+*******************************
+*******   REGISTRARSE   *******
+*******************************
+
+''')
         register(datos_usuarios) 
         
     elif option == '3':
-        print('--- BUSCAR USUARIO ---')
-        usu = input('ingrese nombre de usuario: ')
+        print('''
+*******************************
+*****   BUSCAR USUARIO   *****
+*******************************
+
+''')
+        #usu = input('ingrese nombre de usuario: ')
         #search(usu)
         
     elif option == '4':
-        print('*****-_ Hasta Pronto _-*****')
-        #clear()
+        print('''
+******************************              
+*****    Hasta Pronto    *****
+****************************** 
+''')
         flag = False
     else:
-        print('*****-_ Ingresaste un valor incorrecto _-*****')
-        print('Por favor ingresa nuevamente ')
+        print('''
+
+*****-_ Ingresaste un valor incorrecto _-*****')
+    Por favor ingresa nuevamente 
+    
+''')
     
