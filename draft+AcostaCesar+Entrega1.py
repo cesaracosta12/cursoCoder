@@ -16,6 +16,12 @@ def existe_usuario(db,username):
            return True
 
 def login(db):
+    print('''
+*******************************
+**********   LOGIN   **********
+*******************************
+
+''')
     usu = input('ingrese nombre de usuario: ')
     con = input('ingrese contraseña: ') 
     print(f'usuario: <{usu}>  -- contraseña: <{con}> ')
@@ -26,7 +32,12 @@ def login(db):
     
     
 def register(db):
-        
+        print('''
+*******************************
+*******   REGISTRARSE   *******
+*******************************
+
+''')
         usu = input('ingrese nombre de usuario: ')
         
         while usu == '':
@@ -46,7 +57,18 @@ def register(db):
             db[usu]=con
             print('Se registró exitosamente')
 
-    
+def show_user(db):
+    print('''
+*******************************
+*****   MOSTRAR USUARIOS   *****
+*******************************
+
+''')
+    for k, v in db.items():
+        print(f'Cantidad de usuarios: {len(db)}')
+        print(k)
+        print(v)
+        
 #=================================================== 
 # MENU
 #===================================================    
@@ -67,32 +89,13 @@ while flag:
     option = input('Ingrese una opcion: ')
     print('========================================')
     if option == '1':
-        print('''
-*******************************
-**********   LOGIN   **********
-*******************************
-
-''')
         login(datos_usuarios)
 
     elif option == '2':
-        print('''
-*******************************
-*******   REGISTRARSE   *******
-*******************************
-
-''')
         register(datos_usuarios) 
         
     elif option == '3':
-        print('''
-*******************************
-*****   BUSCAR USUARIO   *****
-*******************************
-
-''')
-        #usu = input('ingrese nombre de usuario: ')
-        #search(usu)
+        show_user(datos_usuarios)
         
     elif option == '4':
         print('''
