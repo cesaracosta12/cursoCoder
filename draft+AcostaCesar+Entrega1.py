@@ -1,11 +1,9 @@
 # Entrega 1
 # Acosta Cesar
-
 #===================================================    
 # DB
 #===================================================    
 datos_usuarios = {}
-
 #===================================================    
 # FUNCIONES
 #===================================================   
@@ -13,14 +11,14 @@ def existing_user(db,username):
     for i in db.keys():
         if i == username :
            return True
-
+#=================================================== 
 def pass_validation(db,username,password):
     for k,v in db.items():
         if k==username and v==password:
             return True
         else:
             return False
-
+#=================================================== 
 def login(db):
     print('''
 ===============================
@@ -82,7 +80,7 @@ def login(db):
 |   Prueba con otro nombre o registra tu cuenta   |
  -------------------------------------------------
                   ''') 
-    
+#===================================================     
 def register(db):
         print('''
 ===============================
@@ -127,7 +125,7 @@ def register(db):
 |     Se registró exitosamente      
  ------------------------------------
                   ''')
-
+#=================================================== 
 def show_user(db):
     print('''
 ==================================
@@ -144,19 +142,18 @@ def show_user(db):
                Contraseña: {v}
 ______________________________________             
               ''')
-        
 #=================================================== 
 # MENU
 #===================================================    
 print('''
 ==================================
-==                             ===
+===                            ===
 ||                              ||
 ||          Bienvenido          ||
 ||                              ||
 ===                            ===
 ==================================      
-      ''')
+''')
 flag = True
 while flag:
     print('''
@@ -170,31 +167,26 @@ while flag:
 - 4) Salir
 ''')
     option = input('Que deseas hacer? \nIngresa una opcion: ')
-    print('\n')
     if option == '1':
         login(datos_usuarios)
-
     elif option == '2':
-        register(datos_usuarios) 
-        
+        register(datos_usuarios)     
     elif option == '3':
-        show_user(datos_usuarios)
-        
+        show_user(datos_usuarios) 
     elif option == '4':
         print('''              
 ==================================
 ||         Hasta luego!         ||
 ==================================
-================================== 
+__________________________________
 ''')
         flag = False
     else:
         print('''
 ========================================
-|| ¡ Ingresaste un valor incorrecto ! ||
-||           Por favor                ||
-||  seleccione nuevamente una opcion  ||
+|  ¡ Ingresaste un valor incorrecto !  |
+|            Por favor                 |
+|   seleccione nuevamente una opcion   |
 ========================================
-
 ''')
     
