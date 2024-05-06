@@ -11,14 +11,14 @@ def existing_user(db,username):
     for i in db.keys():
         if i == username :
            return True
-#=================================================== 
+ 
 def pass_validation(db,username,password):
     for k,v in db.items():
         if k==username and v==password:
             return True
         else:
             return False
-#=================================================== 
+
 def login(db):
     print('''
 ===============================
@@ -56,15 +56,16 @@ def login(db):
                 ''')
             strikes = strikes - 1
             if strikes == 0:
-                (f'''
- ------------------------------------------
-|          Alcanzaste los 3 intentos       |
-|          Regresa al menu principal       |
- ------------------------------------------
+                print(f'''
+ --------------------------------------
+|      Alcanzaste los 3 intentos       |
+|      Regresa al menu principal       |
+ --------------------------------------
                 ''')
                 break
-            print(f'{strikes} intentos restantes')
-            con = input('\nContraseña: ')
+            else:
+                print(f'Intentos restantes: {strikes}')
+                con = input('\nContraseña: ')
             continue
         else:
             print(f'''
@@ -80,7 +81,7 @@ def login(db):
 |   Prueba con otro nombre o registra tu cuenta   |
  -------------------------------------------------
                   ''') 
-#===================================================     
+   
 def register(db):
         print('''
 ===============================
@@ -125,7 +126,7 @@ def register(db):
 |     Se registró exitosamente      
  ------------------------------------
                   ''')
-#=================================================== 
+
 def show_user(db):
     print('''
 ==================================
