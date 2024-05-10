@@ -8,10 +8,11 @@ class Motor:
     
 class Auto:
     cant_ruedas=4 # atributo de la clase
-    def __init__(self,marca,modelo,color='Blanco'):
+    def __init__(self,marca,modelo,num_serie,color='Blanco'):
         self.marca = marca
         self.modelo = modelo
         self.color = color
+        self.__num_serie = num_serie # privado
         self.motor=Motor()
     
     def __str__(self) -> str:
@@ -20,9 +21,9 @@ class Auto:
     def tocar_bocina():
         print('SONIDO DE BOCINAAAAAAAA')
     
-auto1= Auto('Ford','Fiesta','Rojo')
-auto2= Auto('Renault','12')
-auto3= Auto('Fiat','Palio','Rojo')
+auto1= Auto('Ford','Fiesta',121,'Rojo')
+auto2= Auto('Renault','12',121)
+auto3= Auto('Fiat','Palio',235,'Rojo')
 
 print(auto1.cant_ruedas)
 print(auto2.cant_ruedas)
@@ -68,3 +69,5 @@ auto1.color='Negro'
 concesionaria[0]=auto1
 print(concesionaria[0])
 print(concesionaria.autos)
+
+# print(auto1.__num_serie) # no se puede acceder porque el dato es privado
