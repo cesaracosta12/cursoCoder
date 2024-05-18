@@ -32,3 +32,18 @@ carrito.agregar_al_carrito(a3,6)
 # carrito.mostrar_carrito()   
 # carrito.agregar_al_carrito(a6,2)
 carrito.mostrar_carrito()   
+
+
+
+
+# COMPRAR()
+# a la hora de finalizar la compra
+# imprimir comprobante con
+## info de cliente
+## info carrito
+## monto total
+## medio de pago
+## direccion y metodo de envio
+## se descuente el articulo de su stock
+## se imprime el ticket con la hora de la compra en un .txt
+
