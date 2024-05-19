@@ -71,10 +71,13 @@
 # archivo_abierto.close()
 
 # # generamos una lista con todas las lineas de un archivo
-# archivo_abierto = open(f'test_file.txt','r')
-# lineas = archivo_abierto.readlines()
+archivo_abierto = open(f'test_file.txt','r')
+lineas = archivo_abierto.readlines()
+archivo_abierto.close()
 # print(lineas)
-# archivo_abierto.close()
+for i in lineas:
+    print(f'{i} = type: {type(i)}')
+
 
 # # seek() se puede usar para cualquier tipo de operacion
 # mueve el puntero
@@ -90,29 +93,29 @@
 # print(archivo_abierto.read())
 # archivo_abierto.close()
 
-# JSON 
+# # JSON 
 
-# debemos importar json
-import json
+# # debemos importar json
+# import json
 
-# ejemplo de dicciontario
-dicc = {
-    'key1':'value1',
-    'key2':False,
-    'key3':None,
-    'key4':['asd',123]
-}
+# # ejemplo de dicciontario
+# dicc = {
+#     'key1':'value1',
+#     'key2':False,
+#     'key3':None,
+#     'key4':['asd',123]
+# }
 
-# usamos el contextmananger (with)
-# dump()
-with open('archivo_de_no_json.json','w') as archivo_abierto:
-    json.dump(dicc, archivo_abierto, indent=4)
-    # no es necesario close()
+# # usamos el contextmananger (with)
+# # dump()
+# with open('archivo_de_no_json.json','w') as archivo_abierto:
+#     json.dump(dicc, archivo_abierto, indent=4)
+#     # no es necesario close()
 
-# read json
-# load()
-with open('archivo_de_no_json.json','r') as archivo_abierto:
-    datos = json.load(archivo_abierto)
-    print(datos)
-print('********')
-print(datos)
+# # read json
+# # load()
+# with open('archivo_de_no_json.json','r') as archivo_abierto:
+#     datos = json.load(archivo_abierto)
+#     print(datos)
+# print('********')
+# print(datos)

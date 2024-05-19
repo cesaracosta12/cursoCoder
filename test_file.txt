@@ -1,5 +1,4 @@
-juli
-cesar
-mentita
-messi
-riquelme
+juli,28,3232,juli@dsa.com
+cesar,29,3321,cesar@dsa.com
+mentita,3,1213,mentita@dsa.com
+cactus,2,99,cactus@dsa.com

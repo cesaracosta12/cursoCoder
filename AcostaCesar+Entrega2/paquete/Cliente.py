@@ -8,7 +8,11 @@ class Cliente:
         self.cart_cliente = Carrito()
         
     def __str__(self):
-        return f'Cliente {self.nombre} - DNI:{self.documento}'
+        return f'''\n Informacion de Cliente
+    - Nombre : {self.nombre} 
+    - DNI    : {self.documento}
+    - correo : {self.correo}
+    '''
     
     def finalizar_comprar(self):
         ...

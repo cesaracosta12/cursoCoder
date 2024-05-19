@@ -56,7 +56,7 @@ class Carrito:
                         print('\n Ingrese nuevamente una opcion correcta')
                         respuesta=input(f' --->  Desea agregar al carrito {art.stock} unidades? S/N: ')
                     # si el usuario responde SI entonces agrego la cantidad disponible 
-                    if respuesta == 'Y' or respuesta =='y':
+                    if respuesta == 'S' or respuesta =='s':
                         self.cart[len(self.cart)+1]=[art,art.stock]
                         print(f'\n  + "{art.nombre}" se agregó al carrito\n')                        
                     else:
