@@ -1,0 +1,23 @@
+
+################################################
+#### Informacion de tu compra
+#### 
+#### Fecha y hora        : 2024-05-20 16:17:08.476983
+#### 
+#### Info cliente
+####     Nombre          : Lionel Messi
+####     DNI             : 33016244
+####     Correo          : messi.goat@yahoo.com
+####     Direccion       : Av Patria 1587, Cordoba, Argentina
+####  
+#### Metodo de entrega   : Envio a domicilio para "Av Patria 1587, Cordoba, Argentina"
+####            
+#### Detalle compra
+#### 			|- "Zapatillas urbana" de Vans : $60
+#### 			|   Cantidad : 1
+#### 			|- "Iphone 12" de Apple : $1000
+#### 			|   Cantidad : 10
+
+####   
+#### Total a pagar       :$10060
+################################################

@@ -3,8 +3,8 @@ from setuptools import setup
 setup(
     author="Cesar Acosta",
     author_email="ocesaracosta@gmail.com",
-    description="Mi primer setup",
+    description="Setup de entrega2 Curso Python CoderHouse",
     version="0.0.1",
-    name="mipaquete",
-    packages=['nombre del paquete']
+    name="paquete_AcostaCesar_entrega2",
+    packages=['paquete','paquete_entrega1']
 )

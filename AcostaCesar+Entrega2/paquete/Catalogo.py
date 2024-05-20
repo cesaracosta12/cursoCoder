@@ -1,7 +1,6 @@
 from paquete.Articulo import Articulo
-
-
 import csv
+
 class Catalogo:
     catalogo={}
     def __init__(self):
@@ -22,20 +21,25 @@ class Catalogo:
                     return False
 
     def mostrar_catalogo(self):
-        print('_________________________________________')
-        print("Catalogo:")
+        print(' ---> Ver catalogo de productos\n')
+        print("Catalogo")
+        print('ID\t|\tDatos de producto ')
         if self.catalogo=={}:
             print('       no hay productos       ')
         else:
-            for id, articulo in self.catalogo.items():
+            for id, articulo in self.catalogo.items():       
                 if self.tiene_stock(id):
-                    print(f'{id} - "{articulo[0].nombre}" de {articulo[0].marca}: ${articulo[0].precio} - unidades:{articulo[1]}')
+                    print(f'{id}\t|\t"{articulo[0].nombre}" marca {articulo[0].marca} : ${articulo[0].precio}\t|\t unidades : {articulo[1]}')
                 else:
-                    print(f'{id} - "{articulo[0].nombre}" de {articulo[0].marca} - sin unidades disponibles')
-        print('_________________________________________')    
+                    print(f'{id} ******|****** "{articulo[0].nombre}" marca {articulo[0].marca}\t|\t sin unidades disponibles')   
          
     def seleccionar_articulo(self,id_seleccionado):
         for id, articulo in self.catalogo.items():
                 if id_seleccionado == id:
                     return articulo
+    
+    def actualizar_stock(self,articulo_carrito):
+        articulo_catalogo = self.seleccionar_articulo(articulo_carrito[0].id)
+        articulo_catalogo[1]= articulo_catalogo[1]- articulo_carrito[1]
                 
+        
