@@ -1,8 +1,20 @@
 from paquete.Articulo import Articulo
 import csv
 
+#################################################################################
+#  Mi catalogo de productos es un diccionario que cuenta con
+#  key = id 
+#       ( es un entero que autoincrementa a medida que crece el dicc )
+#  value = [ Articulo , cantidad_de_unidades_disponibles ] 
+#       ( un array con 2 indices, el primero un objeto Articulo 
+#          y el segundo un int con la cantidad de unidades disponibles )
+# 
+#################################################################################
+
 class Catalogo:
+    
     catalogo={}
+    
     def __init__(self):
         self.catalogo={}
 

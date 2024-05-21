@@ -1,8 +1,20 @@
 from paquete.Articulo import Articulo
 from paquete.Catalogo import Catalogo
 
+#################################################################################
+#  Mi carrito es un diccionario que cuenta con
+#  key = id 
+#       (es un entero que autoincrementa a medida que crece el dicc)
+#  value = [Articulo,cantidad_de_unidades_agregadas] 
+#       (un array con 2 indices, el primero un objeto Articulo 
+#          y el segundo un int con la cantidad de unidades agregadas)
+# 
+#################################################################################
+
 class Carrito:
+    
     cart={}
+    
     def __init__(self):
         self.cart={}
         

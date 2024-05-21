@@ -1,0 +1,11 @@
+setup.py
+paquete/Articulo.py
+paquete/Carrito.py
+paquete/Catalogo.py
+paquete/Cliente.py
+paquete/__init__.py
+paquete_AcostaCesar_entrega2.egg-info/PKG-INFO
+paquete_AcostaCesar_entrega2.egg-info/SOURCES.txt
+paquete_AcostaCesar_entrega2.egg-info/dependency_links.txt
+paquete_AcostaCesar_entrega2.egg-info/top_level.txt
+paquete_entrega1/AcostaCesar+Entrega1.py

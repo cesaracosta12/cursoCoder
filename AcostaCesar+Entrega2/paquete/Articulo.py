@@ -1,4 +1,3 @@
-
 class Articulo:
     def __init__(self,id,nombre,marca,precio):
         self.id=id

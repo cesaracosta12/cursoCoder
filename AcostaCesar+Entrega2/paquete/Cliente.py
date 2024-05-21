@@ -2,6 +2,11 @@ from paquete.Carrito import Carrito
 from paquete.Carrito import Catalogo
 from datetime import datetime
 
+#################################################################################
+#  Cliente cuenta con sus variables y un Carrito 
+# 
+#################################################################################
+
 class Cliente:
     def __init__(self,nombre,documento,correo,direccion,cart_cliente:Carrito):
         self.nombre=nombre
